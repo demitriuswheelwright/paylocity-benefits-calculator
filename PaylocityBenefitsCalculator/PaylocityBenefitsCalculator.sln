@@ -1,8 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{9C7E8DBB-5135-4511-8E1E-26C83D58B2F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTests", "ApiTests\ApiTests.csproj", "{809152BC-858C-4757-8C5A-AA35E061750B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Application Layer", "1. Application Layer", "{211D4FA0-DF75-4164-BEE8-09AD78AD4A90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Service Layer", "2. Service Layer", "{3D835E47-1190-42B5-B531-2290FD4A1912}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Data Access Layer", "3. Data Access Layer", "{68FFFE47-FF2E-4DA8-BFBA-16D96C317ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Service", "BenefitsCalculator.Service\BenefitsCalculator.Service.csproj", "{23802AAE-61DA-46FF-8D22-FF0ECA778217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Repository", "BenefitsCalculator.Repository\BenefitsCalculator.Repository.csproj", "{2E3CA96D-0191-463F-95C7-5F55CC8E4B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Common", "BenefitsCalculator.Common\BenefitsCalculator.Common.csproj", "{0AD9CB2E-7FFE-4693-AAAC-8D4D8CB3FAFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +33,25 @@ Global
 		{809152BC-858C-4757-8C5A-AA35E061750B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{809152BC-858C-4757-8C5A-AA35E061750B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{809152BC-858C-4757-8C5A-AA35E061750B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23802AAE-61DA-46FF-8D22-FF0ECA778217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23802AAE-61DA-46FF-8D22-FF0ECA778217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23802AAE-61DA-46FF-8D22-FF0ECA778217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23802AAE-61DA-46FF-8D22-FF0ECA778217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3CA96D-0191-463F-95C7-5F55CC8E4B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3CA96D-0191-463F-95C7-5F55CC8E4B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3CA96D-0191-463F-95C7-5F55CC8E4B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3CA96D-0191-463F-95C7-5F55CC8E4B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD9CB2E-7FFE-4693-AAAC-8D4D8CB3FAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD9CB2E-7FFE-4693-AAAC-8D4D8CB3FAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD9CB2E-7FFE-4693-AAAC-8D4D8CB3FAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD9CB2E-7FFE-4693-AAAC-8D4D8CB3FAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C7E8DBB-5135-4511-8E1E-26C83D58B2F5} = {211D4FA0-DF75-4164-BEE8-09AD78AD4A90}
+		{23802AAE-61DA-46FF-8D22-FF0ECA778217} = {3D835E47-1190-42B5-B531-2290FD4A1912}
+		{2E3CA96D-0191-463F-95C7-5F55CC8E4B52} = {68FFFE47-FF2E-4DA8-BFBA-16D96C317ABF}
 	EndGlobalSection
 EndGlobal
