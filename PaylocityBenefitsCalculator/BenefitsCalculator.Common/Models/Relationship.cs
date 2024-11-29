@@ -1,5 +1,4 @@
-namespace Api.Models;
-
+namespace BenefitsCalculator.Common.Models;
 public enum Relationship
 {
     None,
