@@ -12,7 +12,8 @@ public class EmployeesController : ControllerBase
 {
     [SwaggerOperation(Summary = "Get employee by id")]
     [HttpGet("{id}")]
-    public async Task<ActionResult<ApiResponse<GetEmployeeDto>>> Get(int id)
+    [Produces(typeof(ApiResponse<GetEmployeeDto>))]
+    public async Task<IActionResult> Get(int id)
     {
         throw new NotImplementedException();
     }
