@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BenefitsCalculator.Common\BenefitsCalculator.Common.csproj" />
+    <ProjectReference Include="..\BenefitsCalculator.Service\BenefitsCalculator.Service.csproj" />
   </ItemGroup>
 
 </Project>

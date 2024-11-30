@@ -1,6 +1,7 @@
 ﻿using Api.Dtos.Dependent;
 using Api.Dtos.Employee;
 using Api.Models;
+using BenefitsCalculator.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -10,6 +11,13 @@ namespace Api.Controllers;
 [Route("api/v1/[controller]")]
 public class EmployeesController : ControllerBase
 {
+    protected readonly IEmployeeService _employeeService;
+
+    public EmployeesController(IEmployeeService employeeService)
+    {
+        _employeeService = employeeService;
+    }
+
     [SwaggerOperation(Summary = "Get employee by id")]
     [HttpGet("{id}")]
     [Produces(typeof(ApiResponse<GetEmployeeDto>))]
