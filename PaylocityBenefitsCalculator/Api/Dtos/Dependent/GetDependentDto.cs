@@ -1,4 +1,5 @@
 ﻿using Api.Models;
+using BenefitsCalculator.Common.Entities;
 
 namespace Api.Dtos.Dependent;
 

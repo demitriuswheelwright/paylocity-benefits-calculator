@@ -1,4 +1,4 @@
-﻿using BenefitsCalculator.Common.Models;
+﻿using BenefitsCalculator.Common.Entities;
 using BenefitsCalculator.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
