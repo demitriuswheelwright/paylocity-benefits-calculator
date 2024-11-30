@@ -12,15 +12,15 @@ namespace BenefitsCalculator.Service
         {
             _context = context;
         }
-        public async Task<ServiceResponse<IEnumerable<Employee>>> GetAllAsync()
+        public async Task<ApiResponse<IEnumerable<Employee>>> GetAllAsync()
         {
             try
             {
                 var entities = await _context.Set<Employee>().ToListAsync();
 
-                return new ServiceResponse<IEnumerable<Employee>>
+                return new ApiResponse<IEnumerable<Employee>>
                 {
-                    IsSuccess = true,
+                    Success = true,
                     StatusCode = 200,
                     Data = entities,
                     Message = $"Found {entities.Count()} records."
@@ -30,16 +30,16 @@ namespace BenefitsCalculator.Service
             {
                 // Typically I wouldnt return any part of the stacktrace or internal message for security reasons.
 
-                return new ServiceResponse<IEnumerable<Employee>>
+                return new ApiResponse<IEnumerable<Employee>>
                 {
-                    IsSuccess = false,
+                    Success = false,
                     StatusCode = 500,
                     Message = $"{ex.Message}-{ex.InnerException?.Message}"
                 };
             }
         }
 
-        public async Task<ServiceResponse<Employee>> GetAsync(params object[] keys)
+        public async Task<ApiResponse<Employee>> GetAsync(params object[] keys)
         {
             try
             {
@@ -47,17 +47,17 @@ namespace BenefitsCalculator.Service
 
                 if (entity == null)
                 {
-                    return new ServiceResponse<Employee>
+                    return new ApiResponse<Employee>
                     {
-                        IsSuccess = false,
+                        Success = false,
                         StatusCode = 400,
                         Message = "Entity not found or bad request."
                     };
                 }
 
-                return new ServiceResponse<Employee>
+                return new ApiResponse<Employee>
                 {
-                    IsSuccess = true,
+                    Success = true,
                     StatusCode = 200,
                     Data = entity
                 };
@@ -66,9 +66,9 @@ namespace BenefitsCalculator.Service
             {
                 // Typically I wouldnt return any part of the stacktrace or internal message for security reasons.
 
-                return new ServiceResponse<Employee>
+                return new ApiResponse<Employee>
                 {
-                    IsSuccess = false,
+                    Success = false,
                     StatusCode = 500,
                     Message = $"{ex.Message}-{ex.InnerException?.Message}"
                 };

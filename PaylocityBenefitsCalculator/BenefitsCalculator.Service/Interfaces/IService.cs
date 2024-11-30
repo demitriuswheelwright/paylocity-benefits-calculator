@@ -8,7 +8,7 @@ namespace BenefitsCalculator.Service.Interfaces
 {
     public interface IService<T> where T : class
     {
-        Task<ServiceResponse<IEnumerable<T>>> GetAllAsync();
-        Task<ServiceResponse<T>> GetAsync(params object[] keys);
+        Task<ApiResponse<IEnumerable<T>>> GetAllAsync();
+        Task<ApiResponse<T>> GetAsync(params object[] keys);
     }
 }

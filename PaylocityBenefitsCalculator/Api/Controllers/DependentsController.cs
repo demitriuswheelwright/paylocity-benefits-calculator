@@ -1,5 +1,5 @@
 ﻿using Api.Dtos.Dependent;
-using Api.Models;
+using BenefitsCalculator.Service;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

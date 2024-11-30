@@ -1,6 +1,6 @@
 ﻿using Api.Dtos.Dependent;
 using Api.Dtos.Employee;
-using Api.Models;
+using BenefitsCalculator.Service;
 using BenefitsCalculator.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
