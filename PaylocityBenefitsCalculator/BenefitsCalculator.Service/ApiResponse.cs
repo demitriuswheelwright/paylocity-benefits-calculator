@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace BenefitsCalculator.Service
 {
+    /// <summary>
+    /// Added 'Status' here. Sometimes there are situations where we need to return
+    /// one of two, three or four codes, and to prevent having to put conditional logic
+    /// in the controller, it can be handled from the service layer and keep the
+    /// controller a bit leaner.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ApiResponse<T>
     {
         public T? Data { get; set; }
