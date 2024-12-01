@@ -23,11 +23,13 @@ public class EmployeesController : ControllerBase
     [Produces(typeof(ApiResponse<GetEmployeeDto>))]
     public async Task<IActionResult> Get(int id)
     {
-        throw new NotImplementedException();
+        var response = await _employeeService.GetAsync(id);
+
+        return StatusCode(response.StatusCode, response);
     }
 
     /// <summary>
-    /// I try to return interfaces or base classes as often as possible.
+    /// I try to return interfaces or base classes from methods as often as possible.
     /// I'm assuming the reason we're using the concrete class of ActionResult was to make
     /// it clear what the endpoint returns, which we can accomplish by the [Produces] attribute.
     /// </summary>
@@ -37,15 +39,8 @@ public class EmployeesController : ControllerBase
     [Produces(typeof(ApiResponse<List<GetEmployeeDto>>))]
     public async Task<IActionResult> GetAll()
     {
-        //task: use a more realistic production approach
-        
+        var response = await _employeeService.GetAllAsync();
 
-        var result = new ApiResponse<List<GetEmployeeDto>>
-        {
-            Data = employees,
-            Success = true
-        };
-
-        return result;
+        return StatusCode(response.StatusCode, response);
     }
 }

@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BenefitsCalculator.Service
 {
+    /// <summary>
+    /// I am a firm believer in the try-catch pattern. I use it here in the domain/business logic layer,
+    /// so it doesn't need to be used in the controller.
+    /// </summary>
     public class DependentService : IDependentService
     {
         protected readonly DbContext _context;
